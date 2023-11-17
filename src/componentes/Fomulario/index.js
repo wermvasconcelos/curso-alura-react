@@ -4,17 +4,7 @@ import ListaSuspensa from '../ListaSuspensa';
 import Botao from '../Botao';
 import { useState } from 'react';
 
-const Formulario = (props) => {
-
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
+const Formulario = (props) => { 
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -38,7 +28,7 @@ const Formulario = (props) => {
                 <CampoTexto value={nome} aoAlterado={valor => setNome(valor)} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
                 <CampoTexto value={cargo} aoAlterado={valor => setCargo(valor)}label="Cargo" obrigatorio={true} placeholder="Digite seu cargo" />
                 <CampoTexto value={imagem} aoAlterado={valor => setImagem(valor)} label="Imagem" placeholder="Informe o endereço da imagem" />
-                <ListaSuspensa value={time} aoAlterado={valor => setTime(valor)} label="Time" obrigatorio={true} itens={times} />
+                <ListaSuspensa value={time} aoAlterado={valor => setTime(valor)} label="Time" obrigatorio={true} itens={props.times} />
                 <Botao>
                     Criar Card
                 </Botao>
