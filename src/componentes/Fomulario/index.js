@@ -19,16 +19,43 @@ const Formulario = (props) => {
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
         <section className='formulario'>
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto value={nome} aoAlterado={valor => setNome(valor)} label="Nome" obrigatorio={true} placeholder="Digite seu nome" />
-                <CampoTexto value={cargo} aoAlterado={valor => setCargo(valor)}label="Cargo" obrigatorio={true} placeholder="Digite seu cargo" />
-                <CampoTexto value={imagem} aoAlterado={valor => setImagem(valor)} label="Imagem" placeholder="Informe o endereço da imagem" />
-                <ListaSuspensa value={time} aoAlterado={valor => setTime(valor)} label="Time" obrigatorio={true} itens={props.times} />
+                <CampoTexto 
+                    valor={nome} 
+                    aoAlterado={valor => setNome(valor)} 
+                    label="Nome" 
+                    obrigatorio={true} 
+                    placeholder="Digite seu nome" 
+                />
+                <CampoTexto 
+                    valor={cargo} 
+                    aoAlterado={valor => setCargo(valor)}
+                    label="Cargo" 
+                    obrigatorio={true} 
+                    placeholder="Digite seu cargo" 
+                />
+                <CampoTexto 
+                    valor={imagem} 
+                    aoAlterado={valor => setImagem(valor)} 
+                    label="Imagem" 
+                    placeholder="Informe o endereço da imagem" 
+                />
+                <ListaSuspensa
+                    valor={time} 
+                    aoAlterado={valor => setTime(valor)} 
+                    label="Time" 
+                    obrigatorio={true} 
+                    itens={props.times}
+                  />
                 <Botao>
                     Criar Card
                 </Botao>
