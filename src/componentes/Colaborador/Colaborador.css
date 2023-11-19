@@ -46,3 +46,11 @@
 .deletar:hover {
     cursor: pointer;
 }
+
+.favoritar {
+    margin-top: 20px;
+}
+
+.favoritar:hover {
+    cursor: pointer;
+}

@@ -51,28 +51,32 @@ function App() {
       nome: 'WERMENSON VASCONCELOS',
       cargo: 'Líder Técnico',
       imagem: 'http://github.com/wermvasconcelos.png',
-      time: times[0].nome
+      time: times[0].nome,
+      favorito : false
     },
     {
       id: uuidv4(),
       nome: 'MARCOS KAIO',
       cargo: 'Desenvolvedor',
       imagem: 'http://github.com/kaiomarcos056.png',
-      time: times[0].nome
+      time: times[0].nome,
+      favorito: false
     },
     {
       id: uuidv4(),
       nome: 'OSMAR LIMA',
       cargo: 'Desenvolvedor',
       imagem: 'http://github.com/osmarlimaag.png',
-      time: times[0].nome
+      time: times[0].nome,
+      favorito: false
     },
     {
       id: uuidv4(),
       nome: 'ISADORA ROCHA',
       cargo: 'Desenvolvedora',
       imagem: 'http://github.com/is-Isadora-Rocha.png',
-      time: times[0].nome
+      time: times[0].nome,
+      favorito: false
     }
   ]
 
@@ -95,6 +99,13 @@ function App() {
     setTimes([...times, { ...novoTime, id: uuidv4() }])
   }
 
+  function resolverFavorito(id) {
+    setColaboradores(colaboradores.map(colaborador => {
+      if(colaborador.id === id) colaborador.favorito = !colaborador.favorito;
+      return colaborador
+    }))
+  }
+
   return (
     <div>
       <Banner />
@@ -107,6 +118,7 @@ function App() {
         <h1>Minha organização</h1>
         {times.map((time, indice) => 
           <Time 
+            aoFavoritar={resolverFavorito}
             mudarCor={mudarCorDoTime}
             key={indice} 
             time={time} 
