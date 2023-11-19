@@ -4677,6 +4677,11 @@
   "resolved" "https://registry.npmjs.org/he/-/he-1.2.0.tgz"
   "version" "1.2.0"
 
+"hex-to-rgba@^2.0.1":
+  "integrity" "sha512-5XqPJBpsEUMsseJUi2w2Hl7cHFFi3+OO10M2pzAvKB1zL6fc+koGMhmBqoDOCB4GemiRM/zvDMRIhVw6EkB8dQ=="
+  "resolved" "https://registry.npmjs.org/hex-to-rgba/-/hex-to-rgba-2.0.1.tgz"
+  "version" "2.0.1"
+
 "hoopy@^0.1.4":
   "integrity" "sha512-HRcs+2mr52W0K+x8RzcLzuPPmVIKMSv97RGHy0Ea9y/mpcaK+xTrjICA04KAHi4GRzxliNqNJEFYWHghy3rSfQ=="
   "resolved" "https://registry.npmjs.org/hoopy/-/hoopy-0.1.4.tgz"
